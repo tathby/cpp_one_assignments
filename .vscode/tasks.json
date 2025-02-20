@@ -2,11 +2,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CMake Build",
+            "label": "CMake Build (Parent + Children)",
             "type": "shell",
             "command": "cmake",
             "args": [
-                "-S", ".",
+                "-S", ".",   // Configure the root CMakeLists.txt
                 "-B", "build"
             ],
             "group": {
@@ -15,7 +15,7 @@
             }
         },
         {
-            "label": "CMake Compile",
+            "label": "CMake Compile (All Projects)",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -25,10 +25,24 @@
                 "kind": "build",
                 "isDefault": false
             },
-            "dependsOn": ["CMake Build"]
+            "dependsOn": ["CMake Build (Parent + Children)"]
         },
         {
-            "label": "Run Tests",
+            "label": "Run ChildProject1",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/ChildProject1",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run ChildProject2",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/ChildProject2",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Tests (ctest)",
             "type": "shell",
             "command": "ctest",
             "args": [],
@@ -39,7 +53,7 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "dependsOn": ["CMake Compile"]
+            "dependsOn": ["CMake Compile (All Projects)"]
         }
     ]
 }
