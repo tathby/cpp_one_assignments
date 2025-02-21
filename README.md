@@ -1,4 +1,5 @@
 # C++ One Assignments
+![build](https://github.com/kstatz12/cpp_one_assignments/actions/workflows/cmake_build.yml/badge.svg)
 
 ## Visual Studio
 if you want to use a full featured IDE like visual studio or CLion make sure you have the CMake tools installed
