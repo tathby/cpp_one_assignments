@@ -70,6 +70,7 @@ long factorial(const int n)
 ```
 
 * Rubric
+
 | Description                      | Points |
 |----------------------------------|--------|
 | Code Compiles                    | 5      |
