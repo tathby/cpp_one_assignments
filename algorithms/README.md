@@ -71,6 +71,7 @@ long factorial(const int n)
 
 * Rubric
 | Description                      | Points |
+|----------------------------------|--------|
 | Code Compiles                    | 5      |
 | Code is well formed/easy to read | 5      |
 | Code Contains No Warnings        | 5      |
