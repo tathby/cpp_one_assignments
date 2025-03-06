@@ -1,6 +1,5 @@
 # Final
 
-![build](https://github.com/kstatz12/cpp1_final/actions/workflows/build.yml/badge.svg)
 # Requirements
 For our final we will be writing a solver for battleship!
 
@@ -8,18 +7,10 @@ For our final we will be writing a solver for battleship!
 ### Windows
 - [CMake For Visual Studio Documentation](https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170) Install Visual Studio 2022, Cmake Tools and C++ Tools on your home computer
 
-- Build/Run as normal
-
-### Mac/Linux
-- run `./build.sh` in the root of the directory to compile the project for debugging
-- run `./build/battleship` to run the executable
-- to debug run `gdb build/battleship`
-
 ## Rules
 The board is 1000x1000 with 5 ships
 
-you must implement 
-
+you must implement `src/user_solver.cpp`
 ``` c++
 void UserSolver::solve(Board &board)
 {
@@ -28,7 +19,7 @@ void UserSolver::solve(Board &board)
 }
 ```
 
-in the `main.cpp` file. An example implementation is above
+An example implementation is in `src/example_solver.cpp`
 
 ``` c++
 void ExampleSolver::solve(Board &board) {
