@@ -1,6 +1,9 @@
 # Battleship
+The goal of the battleship assignment is to find all of the ships on a grid in as few guesses as possible. 
 
-## Compiling/Runing
+## Compiling/Running
+### Vagrant
+
 ### Windows
 - [CMake For Visual Studio Documentation](https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170) Install Visual Studio 2022, Cmake Tools and C++ Tools on your home computer
 
@@ -35,6 +38,22 @@ The `Solver` class exposes a function called `guess` that takes in 3 arguments. 
 - Bad Guess is returned when the x,y coordinates are out of range
 
 using these return values you must devise an algorithm to find the 5 ships in fewer moves than the computer (see example)
+
+
+### Running Tests
+in the root of the battleship project run:
+``` shell
+my_project$ cd build && ctest
+```
+
+the output looks something like 
+``` shell
+Test project /home/karl/src/cpp_one_assignments/battleship/build
+    Start 1: SOLVER_TEST.BasicAssertions
+1/1 Test #1: SOLVER_TEST.BasicAssertions ......   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 1
+```
 
 ## Rubric
 | Criteria                          | Points |
