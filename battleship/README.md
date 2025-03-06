@@ -1,7 +1,4 @@
-# Final
-
-# Requirements
-For our final we will be writing a solver for battleship!
+# Battleship
 
 ## Compiling/Runing
 ### Windows
