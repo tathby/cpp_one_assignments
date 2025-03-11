@@ -1,12 +1,15 @@
 #include <iostream>
 #include "../include/algo.hpp"
 
-int fib_iterative(const int n)
+typedef long long longest;
+typedef unsigned long positive_long_only;
+
+positive_long_only fib_iterative(const positive_long_only n)
 {
-    int prev = 0;
-    int prev_prev = 0;
-    int sum = 0;
-    for(int i = 0; i < n; i++)
+    positive_long_only prev = 1;
+    positive_long_only prev_prev = 0;
+    positive_long_only sum = 0;
+    for(positive_long_only i = 2; i <= n; i++)
     {
         sum = prev + prev_prev;
         prev_prev = prev;
@@ -16,7 +19,9 @@ int fib_iterative(const int n)
 }
 
 int main() {
-    int x= fibonacci(10000);
-    std::cout << x << std::endl;
+    int y = fib_iterative(10000000000000000);
+    std::cout << y << std::endl;
+    //int x= fibonacci(10000);
+    //std::cout << x << std::endl;
     return 0;
 }

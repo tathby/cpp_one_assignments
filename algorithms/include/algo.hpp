@@ -16,14 +16,24 @@ long fibonacci(const int n)
 }
 
 int linear_search(Array * a, const int target)
-{ 
-    std::cout << a->data[0] << std::endl;
-    return target;
+{
+    for(size_t i = 0; i < a->len; i++)
+    {
+        if(a->data[i] == target)
+        {
+            return i;
+        }
+    }
+    return -1;
 }
 
 long factorial(const int n)
 {
-    return n;
+    if(n == 0)
+        return 1;
+    else{
+        return n * factorial(n - 1);
+    }
 }
 
 std::string fizz_buzz_checker(const int n) {
