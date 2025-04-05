@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include "../include/user_solver.h"
 
@@ -47,3 +48,13 @@ void UserSolver::searchNearby(int x, int y, Board &board, std::vector<std::vecto
         }
     }
 }
+=======
+#include <iostream>
+#include "../include/user_solver.h"
+
+void UserSolver::solve(Board &board) {
+    // Your Implementation goes here
+    ReturnType t = guess(1, 1, board);
+    std::cout << t << std::endl;
+}
+>>>>>>> 7dcff40e8bf12ff73921a872abd54fe043e9c661

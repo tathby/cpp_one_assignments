@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .idea
 *.log
@@ -7,4 +8,15 @@ tmp/
 .cache/
 .vagrant/
 build/
+=======
+.DS_Store
+.idea
+*.log
+tmp/
+
+
+.cache/
+.vagrant/
+build/
+>>>>>>> 7dcff40e8bf12ff73921a872abd54fe043e9c661
 .vs/
