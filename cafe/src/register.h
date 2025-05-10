@@ -46,9 +46,33 @@ class Currency {
 
 class Register {
    public:
-   std::map<CurrencyType, int> checkout(const std::vector<Item> &items)
+   std::map<CurrencyType, int> 
+   checkout(const std::vector<Item> &items)
    {
-       return {};
+    float total = 0.0f;
+    for (const Item &item : items) 
+    {
+        total += item.price;
+    }
+
+    int remaining_cents = static_cast<int>(round(total * 100));
+
+    std::map<CurrencyType, int> change;
+
+    std::vector<CurrencyType> denominations = {BENJAMIN, TWENTY_DOLLAR, TEN_DOLLAR, FIVE_DOLLAR, DOLLAR, QUARTER, DIME, NICKEL, PENNY};
+
+    for (CurrencyType denom : denominations)
+    {
+        int denom_cents = static_cast<int>(round(Currency::get_currency_value(denom) * 100));
+        int count = remaining_cents / denom_cents;
+        if (count > 0) 
+        {
+            change[denom] = count;
+            remaining_cents -= count * denom_cents;
+        }
+    }
+
+    return change;
    }
 };
 
